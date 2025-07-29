@@ -1,0 +1,25 @@
+/* ProductList.css */
+
+.product-list {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+
+  
+  .product-list p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  
