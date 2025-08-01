@@ -1,31 +1,31 @@
 // App.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
 import { Route, Routes } from 'react-router-dom';
-import Products from './pages/Products';
+import Products from './pages/Products'; // ✅ Usa este si aquí usas ProductList internamente
 import Footer from './components/Footer/Footer';
 import { WarpBackground } from './components/magicui/warp-background';
+import Cart from './components/Cart/Cart';
 
-
- 
 const App = () => {
+  const [carrito, setCarrito] = useState([]); // ✅ Estado global del carrito
+
   return (
     <>
-    
-<Navbar />
+      <Navbar />
+      <WarpBackground>
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-    <WarpBackground> 
+          {/* ✅ Pasa carrito y setCarrito como props */}
+          <Route path="/productos" element={<Products carrito={carrito} setCarrito={setCarrito} />} />
 
-    <Routes>
-<Route path='/'  element={<Home/>}/>
-<Route path='/productos'  element={<Products/>}/>
-</Routes>
-
-     </WarpBackground>
-      <Footer/>
-</>
-
+          <Route path="/carrito" element={<Cart carrito={carrito} />} />
+        </Routes>
+      </WarpBackground>
+      <Footer />
+    </>
   );
 };
 

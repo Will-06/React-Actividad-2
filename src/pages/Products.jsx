@@ -1,12 +1,9 @@
-import React from 'react'
-import ProductList from '../components/ProductList/ProductList'
+// pages/Products.jsx
+import React from 'react';
+import ProductList from '../components/ProductList/ProductList';
 
-const Products = () => {
-  return (
+const Products = ({ carrito, setCarrito }) => {
+  return <ProductList carrito={carrito} setCarrito={setCarrito} />;
+};
 
-    <ProductList/>
-
-  )
-}
-
-export default Products
+export default Products;

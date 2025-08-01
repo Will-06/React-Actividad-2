@@ -23,7 +23,7 @@ function ProductList() {
     };
   return (
     <div className="product-list">
-      <h2 className="text-3xl font-bold text-white bg-gray-100/20 dark:bg-gray-800/20 backdrop-blur-md px-4 py-2 rounded-md mb-6">Lista de Productos</h2>
+      <h2 className="text-3xl font-bold text-gray bg-gray-100/20 dark:bg-gray-800/20 backdrop-blur-md px-4 py-2 rounded-md mb-6">Lista de Productos</h2>
 
       <Cart carrito={carrito} />
 

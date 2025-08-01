@@ -14,10 +14,10 @@ const Card = ({ nombre, precio, imagen ,onAddToCart }) => {
       <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">Precio: ${precio}</p>
     
       <button className="px-4 py-2 rounded-md bg-white/20 backdrop-blur-md text-gray-900 dark:text-white font-semibold shadow-md border border-white/30 hover:bg-white/30 transition">
-  <AuroraText>Compra YA</AuroraText>
+  <AuroraText><button onClick={onAddToCart}>Agregar al carrito</button></AuroraText>
 </button>
 
-<button onClick={onAddToCart}>Agregar al carrito</button>
+
      
     </div>
   );

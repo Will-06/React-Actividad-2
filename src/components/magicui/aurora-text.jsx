@@ -5,9 +5,9 @@ export const AuroraText = memo(({
   children,
   className = "",
   colors = [ "#1A3D1A",  // verde oscuro elegante para fondo (contraste)
-  "#A3FF12",  // verde lima para detalles o texto
-  "#D1FF72",  // lima suave para borde o hover
-  "#A3FF12", ],
+  "#4039a5ff",  // verde lima para detalles o texto
+  "#942f76ff",  // lima suave para borde o hover
+  "#ffe712ff", ],
   speed = 1
 }) => {
   const gradientStyle = {

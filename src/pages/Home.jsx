@@ -8,7 +8,7 @@ const Home = () => {
 		<h1 className="text-4xl font-bold leading-none sm:text-5xl">Bienvenido a la Tienda</h1>
 		<p className="px-8 mt-8 mb-12 text-lg">Visita la sección de productos para ver lo que ofrecemos.</p>
 		<div className="flex flex-wrap justify-center">
-			<button className="px-8 py-3 m-2 text-lg border rounded dark:text-gray-900 dark:border-gray-300"><Link to="/productos" style={{ color: 'white' }}>Productos</Link></button>
+			<button className="px-8 py-3 m-2 text-lg border rounded dark:text-gray-900 dark:border-gray-300"><Link to="/productos" style={{ color: 'gray' }}>Productos</Link></button>
 			
 		</div>
 	</div>
