@@ -2,10 +2,12 @@ import React from 'react'
 import { useState , useEffect } from 'react'
 import Card from '../Card/Card';
 import './ProductList.css'
+import Cart from '../Cart/Cart';
+
 
 function ProductList() {
     const [productos, setProductos] = useState([]);
-
+    const [carrito, setCarrito] = useState([]);
     useEffect(() => {
       fetch('https://fakestoreapi.com/products')
         .then((res) => res.json())
@@ -16,11 +18,15 @@ function ProductList() {
           console.error('Error al cargar productos:', error);
         });
     }, []);
+    const agregarAlCarrito = (producto) => {
+      setCarrito((prev) => [...prev, producto]);
+    };
   return (
     <div className="product-list">
-      <h2 className="text-3xl font-bold text-white bg-gray-100/20 dark:bg-gray-800/20 backdrop-blur-md px-4 py-2 rounded-md mb-6">
-  Lista de Productos
-</h2>
+      <h2 className="text-3xl font-bold text-white bg-gray-100/20 dark:bg-gray-800/20 backdrop-blur-md px-4 py-2 rounded-md mb-6">Lista de Productos</h2>
+
+      <Cart carrito={carrito} />
+
       {productos.length === 0 ? (
         
         <div className="flex items-center justify-center min-h-screen">
@@ -36,6 +42,7 @@ function ProductList() {
     nombre={p.title}
     precio={p.price}
     imagen={p.image} 
+    onAddToCart={() => agregarAlCarrito({ nombre: p.title, precio: p.price })}
   />
 ))}
 

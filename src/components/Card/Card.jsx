@@ -2,7 +2,7 @@ import React from 'react';
 
 import { AuroraText } from '../magicui/aurora-text';
 
-const Card = ({ nombre, precio, imagen }) => {
+const Card = ({ nombre, precio, imagen ,onAddToCart }) => {
   return (
     <div className="backdrop-blur-md bg-gray-200/30 dark:bg-gray-800/30 border border-gray-300/40 dark:border-gray-500/30 shadow-lg rounded-xl p-6 max-w-md mx-auto">
       <img
@@ -17,6 +17,7 @@ const Card = ({ nombre, precio, imagen }) => {
   <AuroraText>Compra YA</AuroraText>
 </button>
 
+<button onClick={onAddToCart}>Agregar al carrito</button>
      
     </div>
   );
